@@ -1,0 +1,11 @@
+version: "3.2"
+
+services:
+  couchserver:
+    image: couchdb
+    restart: always
+    ports:
+      - "5984:5984"
+    volumes:
+      - ./couchdb_local.ini:/opt/couchdb/etc/local.ini
+      - ./data:/opt/couchdb/data
